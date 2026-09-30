@@ -3,297 +3,364 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sedra Hosh — Web Developer &amp; QA Engineer</title>
 <meta name="description" content="Sedra Hosh – Web Developer & QA Engineer. Laravel, CMS and quality assurance.">
 <meta property="og:title" content="Sedra Hosh – Web Developer & QA Engineer">
 <meta property="og:description" content="Building, testing, and improving digital experiences.">
-<meta property="og:image" content="img/rhb-home-cover.webp">
-<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Sedra Hosh</title>
+<meta property="og:image" content="https://sedrahosh.github.io/img/rhb-home-cover.webp">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&f[]=general-sans@400,500,600&display=swap">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Schibsted+Grotesk:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap">
+<script>document.documentElement.classList.add('js')</script>
 <style>
-/* Layout: one editorial column (max 1160px), sticky nav; the hero is a "pipeline run" of Sedra's process; projects are stacked case studies with real screenshots in device frames. */
+/* Dark, type-led portfolio: giant name, moving strips, big work cards, case studies open in a sheet. */
 :root{
-  --bg:#f5f6f8;
-  --surface:#ffffff;
-  --ink:#12151c;
-  --muted:#5b6272;
-  --line:#dfe2e8;
-  --accent:#2440c2;
-  --accent-soft:#e6eafb;
-  --pass:#1d7a4f;
-  --pass-soft:#e2f2ea;
-  --frame:#e9ebf0;
-  --shadow:0 1px 2px rgba(18,21,28,.05),0 12px 32px -12px rgba(18,21,28,.14);
-  --f-display:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
-  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-  --r:14px;
+  --bg:#0a0a0a;
+  --card:#141414;
+  --card-2:#1b1b1b;
+  --line:rgba(255,255,255,.1);
+  --fg:#e6e6e6;
+  --muted:rgba(255,255,255,.5);
+  --soft:rgba(255,255,255,.68);
+  --accent:#b9c6ff;
+  --pass:#7fe0a8;
+  --f-display:"Satoshi","Helvetica Neue",Arial,sans-serif;
+  --f-body:"General Sans","Satoshi",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+  --gut:clamp(16px,4vw,48px);
+  color-scheme:dark;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0d0f14;--surface:#151821;--ink:#eceef3;--muted:#9aa1b1;--line:#262a36;
-  --accent:#8b9dff;--accent-soft:#1c2240;--pass:#5fcf98;--pass-soft:#12291f;--frame:#1d212c;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 16px 40px -16px rgba(0,0,0,.6);color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#0d0f14;--surface:#151821;--ink:#eceef3;--muted:#9aa1b1;--line:#262a36;
-  --accent:#8b9dff;--accent-soft:#1c2240;--pass:#5fcf98;--pass-soft:#12291f;--frame:#1d212c;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 16px 40px -16px rgba(0,0,0,.6);color-scheme:dark}
-
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{background:var(--bg);color:var(--ink);font:16px/1.65 var(--f-body);-webkit-font-smoothing:antialiased}
-a{color:inherit}
-h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:-.02em;line-height:1.1}
-p{margin:0}
-.wrap{max-width:1160px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
-.mono{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.04em}
-.eyebrow{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--f-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+[hidden]{display:none!important}
+::selection{background:var(--accent);color:#0a0a0a}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1320px;margin:0 auto;padding-inline:var(--gut)}
+.serif{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:0}
+.label{font-size:.8rem;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
 
 /* nav */
-.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
-.brand{font-family:var(--f-display);font-weight:800;font-size:1.05rem;text-decoration:none;display:flex;align-items:center;gap:10px;letter-spacing:-.01em}
-.brand i{display:grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--ink);color:var(--bg);font-style:normal;font-size:.8rem}
-.links{display:flex;gap:4px}
-.links a{text-decoration:none;font-size:.9rem;color:var(--muted);padding:8px 12px;border-radius:8px;transition:color .2s,background .2s}
-.links a:hover,.links a.on{color:var(--ink);background:var(--frame)}
-.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:7px 11px;font:500 .85rem var(--f-body);cursor:pointer}
-@media (max-width:820px){
-  .menu-btn{display:block}
-  .links{position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 16px 16px;display:none}
-  .links.open{display:flex}
-}
-
-/* buttons */
-.btns{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:10px;font:600 .92rem var(--f-body);text-decoration:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;transition:transform .2s,border-color .2s,background .2s}
-.btn:hover{transform:translateY(-1px);border-color:var(--ink)}
-.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.btn.ghost{background:transparent}
-.btn svg{width:16px;height:16px}
+.nav{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:4px;padding:6px;border-radius:99px;background:rgba(20,20,20,.86);border:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);max-width:calc(100vw - 24px)}
+.nav a{font-size:.84rem;letter-spacing:.03em;padding:9px 16px;border-radius:99px;color:rgba(255,255,255,.8);transition:background .3s,color .3s;white-space:nowrap}
+.nav a:hover{background:rgba(255,255,255,.08);color:#fff}
+.nav a.cta{background:var(--fg);color:#0a0a0a;font-weight:500}
+.nav a.cta:hover{background:#fff}
+@media (max-width:560px){.nav a{padding:8px 11px;font-size:.78rem}.nav .hide-sm{display:none}}
 
 /* hero */
-.hero{padding-block:clamp(56px,9vw,112px) clamp(48px,7vw,88px)}
-.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(32px,5vw,72px);align-items:end}
-.hero h1{font-size:clamp(3rem,9vw,6.4rem);font-weight:800;letter-spacing:-.045em;line-height:.95;margin-block:18px 20px}
-.hero .role{font-family:var(--f-display);font-size:clamp(1.15rem,2.2vw,1.45rem);font-weight:600}
-.hero .tag{color:var(--muted);font-size:1.08rem;margin-block:8px 32px;max-width:36ch}
-.hero-grid>*{min-width:0}
+.hero{padding-block:clamp(120px,16vw,190px) clamp(40px,6vw,72px);position:relative}
+.hero-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:clamp(20px,3vw,36px)}
+.status{display:inline-flex;align-items:center;gap:10px;font-size:.9rem;color:var(--soft)}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--pass);box-shadow:0 0 0 0 rgba(127,224,168,.6);animation:ping 2.4s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(127,224,168,.55)}70%{box-shadow:0 0 0 10px rgba(127,224,168,0)}100%{box-shadow:0 0 0 0 rgba(127,224,168,0)}}
+.name{font-family:var(--f-display);font-weight:900;font-size:clamp(4.2rem,16.5vw,15rem);line-height:.86;letter-spacing:-.055em;margin:0;color:var(--fg);display:flex;flex-wrap:wrap;column-gap:.18em}
+.name .w{display:inline-flex;overflow:hidden;padding-bottom:.06em}
+.name .c{display:inline-block;transform:translateY(105%);animation:up 1s var(--ease) forwards;animation-delay:calc(var(--i)*45ms + .15s)}
+.name .dot{color:var(--accent)}
+@keyframes up{to{transform:none}}
+.hero-bottom{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end;margin-top:clamp(28px,4vw,48px)}
+.roles{display:grid;gap:2px;font-size:clamp(1.1rem,1.8vw,1.35rem);color:var(--muted)}
+.roles span{opacity:0;animation:fade .8s var(--ease) forwards;animation-delay:calc(var(--i)*.1s + .9s)}
+.roles span:first-child{color:var(--fg)}
+.hero-right{justify-self:end;max-width:440px;display:grid;gap:22px;opacity:0;animation:fade .9s var(--ease) 1.2s forwards}
+.hero-right p{font-size:clamp(1.15rem,1.8vw,1.4rem);line-height:1.4;color:var(--soft);margin:0}
+.hero-right p em{color:var(--fg)}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:99px;border:1px solid var(--line);background:transparent;cursor:pointer;font-weight:500;font-size:.95rem;transition:background .3s,border-color .3s,transform .3s var(--ease)}
+.btn:hover{border-color:rgba(255,255,255,.4);transform:translateY(-2px)}
+.btn.fill{background:var(--fg);color:#0a0a0a;border-color:var(--fg)}
+.btn.fill:hover{background:#fff}
+.btn .arr{display:inline-block;transition:transform .3s var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+@media (max-width:760px){.hero-bottom{grid-template-columns:1fr}.hero-right{justify-self:start}}
 
-.pipeline{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
-.pipe-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line)}
-.pipe-head .mono{color:var(--muted)}
-.badge{display:inline-flex;align-items:center;gap:6px;font:500 .72rem var(--f-mono);letter-spacing:.04em;padding:4px 10px;border-radius:99px;background:var(--pass-soft);color:var(--pass)}
-.badge::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
-.steps{list-style:none;margin:0;padding:8px 0}
-.steps li{display:grid;grid-template-columns:22px 1fr auto;gap:12px;align-items:center;padding:9px 18px;font-size:.95rem}
-.steps .dot{width:14px;height:14px;border-radius:50%;border:2px solid var(--pass);position:relative;justify-self:center}
-.steps .dot::after{content:"";position:absolute;inset:2px;border-radius:50%;background:var(--pass);transform:scale(0);animation:fill .35s ease forwards;animation-delay:calc(var(--i)*.28s + .4s)}
-.steps li:not(:last-child) .dot::before{content:"";position:absolute;left:50%;top:14px;width:2px;height:24px;background:var(--line);transform:translateX(-50%)}
-.steps b{font-weight:600}
-.steps span{color:var(--muted);font-family:var(--f-mono);font-size:.72rem}
-@keyframes fill{to{transform:scale(1)}}
-@media (max-width:860px){.hero-grid{grid-template-columns:1fr;align-items:start}}
+/* marquee */
+.marquee{overflow:hidden;border-block:1px solid var(--line);padding-block:18px;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.track{display:flex;width:max-content;animation:slide var(--dur,40s) linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.track span{display:inline-flex;align-items:center;gap:28px;padding-right:28px;white-space:nowrap;font-size:clamp(1rem,1.6vw,1.2rem);color:var(--soft)}
+.track span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);opacity:.7}
+.track.rev{animation-direction:reverse}
+@keyframes slide{to{transform:translateX(-50%)}}
+.big-marquee{border:0;padding-block:clamp(28px,5vw,56px)}
+.big-marquee .track span{font-family:var(--f-display);font-weight:900;font-size:clamp(3rem,9vw,7.5rem);letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.28);gap:.35em;padding-right:.35em}
+.big-marquee .track span b{color:var(--fg);-webkit-text-stroke:0;font-weight:900}
+.big-marquee .track span::after{width:.18em;height:.18em;opacity:1}
 
-/* sections */
-section{padding-block:clamp(56px,8vw,104px)}
-.sec-head{display:grid;grid-template-columns:220px 1fr;gap:24px 48px;margin-bottom:40px;align-items:baseline}
-.sec-head h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700}
-.sec-head p{color:var(--muted);max-width:60ch;grid-column:2}
-@media (max-width:760px){.sec-head{grid-template-columns:1fr}.sec-head p{grid-column:1}}
-.rule{border:0;border-top:1px solid var(--line);margin:0}
+/* section heads */
+section{padding-block:clamp(72px,10vw,140px)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(32px,5vw,56px)}
+.head h2{font-family:var(--f-display);font-weight:700;font-size:clamp(2.6rem,7vw,5.5rem);letter-spacing:-.045em;line-height:.95;margin:0}
+.head h2 .serif{font-size:1.08em;color:var(--accent)}
+.head p{color:var(--muted);max-width:40ch;margin:0}
+
+/* work grid */
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.filter{padding:8px 16px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;font-size:.85rem;transition:all .3s}
+.filter[aria-pressed="true"]{background:var(--fg);color:#0a0a0a;border-color:var(--fg)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+.card{position:relative;display:flex;flex-direction:column;gap:14px;cursor:none;text-align:left;background:none;border:0;padding:0}
+.card.wide{grid-column:1/-1}
+.frame{position:relative;border-radius:22px;overflow:hidden;background:var(--card);aspect-ratio:16/10;max-width:100%;isolation:isolate}
+.card.wide .frame{aspect-ratio:21/9}
+.frame img{width:100%;height:100%;object-fit:cover;object-position:top;transform:scale(1.02);transition:transform 1.2s var(--ease),filter .6s}
+.card:hover .frame img{transform:scale(1.07)}
+.frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,10,10,.65));pointer-events:none}
+.chips{position:absolute;left:16px;top:16px;display:flex;gap:6px;flex-wrap:wrap;z-index:2}
+.chip{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 11px;border-radius:99px;background:rgba(255,255,255,.88);color:#111;font-weight:500}
+.meta-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-inline:4px}
+.meta-row h3{font-family:var(--f-display);font-weight:700;font-size:clamp(1.3rem,2.4vw,1.9rem);letter-spacing:-.03em;margin:0;line-height:1.1}
+.meta-row span{color:var(--muted);font-size:.9rem;text-align:right}
+.cursor{position:fixed;left:0;top:0;z-index:60;width:96px;height:96px;margin:-48px 0 0 -48px;border-radius:50%;background:var(--accent);color:#0a0a0a;display:grid;place-items:center;font-weight:600;font-size:.85rem;pointer-events:none;transform:scale(0);transition:transform .35s var(--ease)}
+.cursor.on{transform:scale(1)}
+@media (hover:none),(pointer:coarse){.card{cursor:pointer}.cursor{display:none}}
+.qa-card .frame{display:grid;align-content:space-between;padding:clamp(20px,3vw,32px);background:radial-gradient(120% 90% at 100% 0%,#1f2440 0%,var(--card) 60%)}
+.qa-card .frame::after{display:none}
+.qa-card .chips{position:static}
+.qa-steps{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 10px;font-family:var(--f-display);font-weight:700;font-size:clamp(1.2rem,2.6vw,2rem);letter-spacing:-.03em}
+.qa-steps li{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.35);transition:color .4s}
+.qa-steps li:not(:last-child)::after{content:"→";font-weight:500;color:rgba(255,255,255,.25)}
+.qa-card:hover .qa-steps li,.qa-steps li.lit{color:var(--fg)}
+@media (max-width:760px){.grid{grid-template-columns:1fr}.card.wide .frame{aspect-ratio:16/10}}
 
 /* about */
-.about{display:grid;grid-template-columns:220px 1fr;gap:48px}
-.about-text{display:grid;gap:18px;font-size:1.08rem;max-width:64ch}
-.about-text p:first-child{font-family:var(--f-display);font-size:clamp(1.3rem,2.4vw,1.65rem);line-height:1.35;font-weight:500;letter-spacing:-.01em}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:12px}
-.facts div{background:var(--surface);padding:16px 18px}
-.facts dt{color:var(--muted);font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
-.facts dd{margin:4px 0 0;font-weight:600}
-@media (max-width:760px){.about{grid-template-columns:1fr;gap:16px}}
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(24px,5vw,80px)}
+.statement{font-family:var(--f-display);font-weight:500;font-size:clamp(1.6rem,3.6vw,3rem);line-height:1.15;letter-spacing:-.03em;margin:0}
+.statement .serif{color:var(--accent);font-size:1.1em}
+.statement .dim{color:rgba(255,255,255,.35)}
+.about-more{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:40px;color:var(--soft)}
+.about-more p{margin:0}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:48px;border-top:1px solid var(--line)}
+.facts div{padding:20px 0;border-bottom:1px solid var(--line)}
+.facts div+div{padding-left:20px;border-left:1px solid var(--line)}
+.facts dt{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:6px 0 0;font-family:var(--f-display);font-weight:700;font-size:1.15rem;letter-spacing:-.02em}
+@media (max-width:860px){.about{grid-template-columns:1fr}.about-more{grid-template-columns:1fr}.facts{grid-template-columns:1fr}.facts div+div{padding-left:0;border-left:0}}
 
 /* skills */
-.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.skill{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px}
-.skill h3{font-size:1.1rem;font-weight:700;display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:16px}
-.skill h3 .mono{color:var(--muted);font-weight:400}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{font-size:.86rem;padding:6px 12px;border-radius:8px;background:var(--frame);white-space:nowrap}
-.chip.learn{background:transparent;border:1px dashed var(--muted);color:var(--muted)}
-.chip.learn small{font-family:var(--f-mono);font-size:.68rem;margin-left:4px}
-@media (max-width:760px){.skills{grid-template-columns:1fr}}
-
-/* projects */
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
-.filter{font:500 .88rem var(--f-body);padding:8px 16px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;transition:all .2s}
-.filter[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
-.filter .n{font-family:var(--f-mono);font-size:.72rem;opacity:.7;margin-left:6px}
-
-.case{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-bottom:28px;animation:rise .5s ease both}
-@keyframes rise{from{transform:translateY(10px);opacity:.4}to{transform:none;opacity:1}}
-.case-top{display:grid;grid-template-columns:1fr auto;gap:16px 32px;padding:clamp(22px,3.5vw,40px);padding-bottom:0}
-.case-top>*{min-width:0}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-.tag-pill{font:500 .72rem var(--f-mono);letter-spacing:.04em;padding:4px 10px;border-radius:6px;background:var(--accent-soft);color:var(--accent)}
-.case h3{font-size:clamp(1.6rem,3.4vw,2.35rem);font-weight:700}
-.case .type{color:var(--muted);margin-top:6px}
-.visit{align-self:start;font-size:.88rem;padding:10px 16px}
-
-.meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border-block:1px solid var(--line);margin-top:28px}
-.meta>div{background:var(--surface);padding:16px clamp(22px,3.5vw,40px)}
-.meta dt{font:.7rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.meta dd{margin:4px 0 0;font-weight:600;font-size:.95rem}
-@media (max-width:760px){.meta{grid-template-columns:1fr}.case-top{grid-template-columns:1fr}}
-
-.case-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(24px,4vw,56px);padding:clamp(22px,3.5vw,40px)}
-.case-body>*{min-width:0}
-.case-text{display:grid;gap:26px;align-content:start}
-.block h4{font:600 .72rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
-.block p{color:var(--ink)}
-.resp{display:grid;gap:14px}
-.resp-group{border-left:2px solid var(--line);padding-left:14px}
-.resp-group b{display:block;font-size:.88rem;margin-bottom:4px}
-.resp-group ul{margin:0;padding:0;list-style:none;display:grid;gap:2px;color:var(--muted);font-size:.93rem}
-.resp-group li::before{content:"– ";color:var(--line)}
-.resp-group.client{border-color:var(--accent)}
-@media (max-width:900px){.case-body{grid-template-columns:1fr}}
-
-/* gallery */
-.gallery{display:grid;gap:14px;align-content:start}
-.stage{display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:14px;align-items:start}
-.stage.no-phone{grid-template-columns:minmax(0,1fr)}
-.browser{border-radius:12px;overflow:hidden;background:var(--frame);border:1px solid var(--line);box-shadow:var(--shadow);cursor:zoom-in;padding:0;display:block;width:100%;text-align:left;color:inherit}
-.browser .bar{display:flex;align-items:center;gap:6px;padding:9px 12px}
-.browser .bar i{width:8px;height:8px;border-radius:50%;background:var(--line)}
-.browser .bar span{margin-left:8px;flex:1;min-width:0;font:.7rem var(--f-mono);color:var(--muted);background:var(--surface);padding:3px 10px;border-radius:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.browser .shot{aspect-ratio:16/10;max-width:100%;overflow:hidden;background:var(--surface)}
-.browser img,.phone img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .6s ease,opacity .25s}
-.browser:hover img{transform:scale(1.015)}
-.phone{border-radius:24px;border:6px solid var(--ink);background:var(--ink);overflow:hidden;box-shadow:var(--shadow);cursor:zoom-in;padding:0;display:block;width:100%}
-.phone .shot{aspect-ratio:9/19;max-width:100%;overflow:hidden;border-radius:18px;background:var(--surface)}
-.thumbs{display:flex;gap:8px;flex-wrap:wrap}
-.thumb{font:500 .8rem var(--f-body);padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;transition:all .2s}
-.thumb[aria-pressed="true"]{border-color:var(--ink);color:var(--ink);background:var(--frame)}
-.hint{font:.72rem var(--f-mono);color:var(--muted)}
-@media (max-width:520px){.stage{grid-template-columns:minmax(0,1fr) 96px}.phone{border-width:4px;border-radius:16px}.phone .shot{border-radius:12px}}
-
-/* QA case */
-.qa-flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.qa-flow li{background:var(--surface);padding:16px 14px;display:grid;gap:4px}
-.qa-flow .mono{color:var(--accent)}
-.qa-flow b{font-family:var(--f-display);font-size:1.02rem}
-.qa-flow small{color:var(--muted);font-size:.8rem;line-height:1.45}
-@media (max-width:900px){.qa-flow{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (max-width:520px){.qa-flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.qa-body{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,56px);padding:0 clamp(22px,3.5vw,40px) clamp(22px,3.5vw,40px)}
-.qa-body>*{min-width:0}
-.checklist{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-.checklist li{display:flex;gap:10px;align-items:baseline;font-size:.95rem}
-.checklist li::before{content:"✓";font-family:var(--f-mono);font-size:.75rem;color:var(--pass);background:var(--pass-soft);border-radius:4px;padding:0 5px;flex:none}
-@media (max-width:760px){.qa-body{grid-template-columns:1fr}}
+.skills{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.skill{background:var(--bg);padding:clamp(20px,2.5vw,32px);transition:background .4s}
+.skill:hover{background:var(--card)}
+.skill h3{font-family:var(--f-display);font-weight:700;font-size:1.25rem;letter-spacing:-.02em;margin:0 0 4px}
+.skill .label{display:block;margin-bottom:18px}
+.skill ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;color:var(--soft);font-size:.95rem}
+.skill li small{font-size:.72rem;color:var(--accent);border:1px solid rgba(185,198,255,.35);border-radius:99px;padding:1px 8px;margin-left:6px}
+@media (max-width:1000px){.skills{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.skills{grid-template-columns:1fr}}
 
 /* experience */
-.timeline{list-style:none;margin:0;padding:0;display:grid}
-.timeline li{display:grid;grid-template-columns:220px 1fr;gap:12px 48px;padding-block:26px;border-top:1px solid var(--line)}
-.timeline li:last-child{border-bottom:1px solid var(--line)}
-.timeline .when{font:.78rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:4px}
-.timeline .now{color:var(--pass)}
-.timeline h3{font-size:1.3rem;font-weight:700;margin-bottom:6px}
-.timeline p{color:var(--muted);max-width:62ch}
-.timeline .chips{margin-top:12px}
-@media (max-width:760px){.timeline li{grid-template-columns:1fr}}
+.xp{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.xp li{display:grid;grid-template-columns:200px minmax(0,1fr) auto;gap:16px 40px;padding-block:clamp(24px,3vw,40px);border-bottom:1px solid var(--line);align-items:baseline;transition:padding .5s var(--ease)}
+.xp li:hover{padding-left:12px}
+.xp .when{color:var(--muted);font-size:.95rem}
+.xp .now{color:var(--pass)}
+.xp h3{font-family:var(--f-display);font-weight:700;font-size:clamp(1.4rem,3vw,2.3rem);letter-spacing:-.035em;margin:0 0 8px;line-height:1.05}
+.xp h3 .serif{color:var(--muted);font-size:1.05em}
+.xp p{margin:0;color:var(--soft);max-width:62ch}
+.xp .co{font-size:.9rem;color:var(--muted);white-space:nowrap}
+@media (max-width:760px){.xp li{grid-template-columns:1fr}.xp .co{white-space:normal}}
 
 /* contact */
-.contact{background:var(--ink);color:var(--bg);border-radius:24px;padding:clamp(28px,6vw,72px);display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end}
-.contact>*{min-width:0}
-.contact h2{font-size:clamp(2.2rem,6vw,4rem);font-weight:800;letter-spacing:-.04em}
-.contact p{opacity:.72;margin-top:14px;max-width:42ch}
-.clist{display:grid;gap:10px}
-.crow{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border:1px solid color-mix(in srgb,var(--bg) 22%,transparent);border-radius:12px;text-decoration:none;color:inherit;transition:background .2s}
-a.crow:hover{background:color-mix(in srgb,var(--bg) 8%,transparent)}
-.crow .k{font:.7rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;opacity:.6;display:block}
-.crow .v{font-weight:600;overflow-wrap:anywhere}
-.crow.off{opacity:.55}
-.copy{flex:none;font:500 .78rem var(--f-mono);background:var(--bg);color:var(--ink);border:0;border-radius:8px;padding:7px 12px;cursor:pointer}
-@media (max-width:820px){.contact{grid-template-columns:1fr}}
-footer{padding-block:32px 48px;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.contact{text-align:center;padding-block:clamp(90px,14vw,180px) clamp(40px,6vw,64px)}
+.contact .label{margin-bottom:24px;display:block}
+.contact h2{font-family:var(--f-display);font-weight:900;font-size:clamp(3.4rem,11vw,10rem);letter-spacing:-.055em;line-height:.9;margin:0}
+.contact h2 .serif{font-weight:400;color:var(--accent)}
+.contact .sub{color:var(--muted);margin:24px auto 36px;max-width:44ch}
+.mail{display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;font-size:clamp(1.1rem,2.6vw,1.8rem);font-family:var(--f-display);font-weight:500;letter-spacing:-.02em;border-bottom:1px solid var(--line);padding-bottom:8px;transition:border-color .3s}
+.mail:hover{border-color:var(--fg)}
+.copy{font:500 .8rem var(--f-body);border:1px solid var(--line);background:transparent;border-radius:99px;padding:6px 14px;cursor:pointer;color:var(--soft)}
+.links{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:36px}
+footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:28px 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
 
-/* lightbox */
-.lb{position:fixed;inset:0;z-index:100;background:rgba(8,10,14,.86);display:grid;grid-template-rows:auto 1fr;padding:env(safe-area-inset-top,0px) 0 0}
-.lb-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;color:#eceef3}
-.lb-bar span{font:.8rem var(--f-mono);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.lb-bar button{background:#eceef3;color:#12151c;border:0;border-radius:8px;padding:8px 14px;font:600 .85rem var(--f-body);cursor:pointer}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+
+/* case sheet */
+.sheet{position:fixed;inset:0;z-index:80;display:grid;grid-template-rows:auto 1fr;background:var(--bg);transform:translateY(100%);transition:transform .7s var(--ease);visibility:hidden}
+.sheet.open{transform:none;visibility:visible}
+.sheet-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:calc(14px + env(safe-area-inset-top,0px)) var(--gut) 14px;border-bottom:1px solid var(--line)}
+.sheet-bar span{color:var(--muted);font-size:.9rem;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sheet-body{overflow:auto;overscroll-behavior:contain;padding-bottom:80px}
+.cs-hero{padding-block:clamp(40px,6vw,80px) clamp(24px,3vw,40px)}
+.cs-hero .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
+.cs-hero .tags span{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:99px;border:1px solid var(--line);color:var(--soft)}
+.cs-hero h2{font-family:var(--f-display);font-weight:900;font-size:clamp(2.8rem,8vw,6.5rem);letter-spacing:-.05em;line-height:.92;margin:0}
+.cs-hero p{color:var(--soft);font-size:clamp(1.05rem,1.8vw,1.3rem);max-width:56ch;margin:18px 0 0}
+.cs-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-block:1px solid var(--line);margin-bottom:clamp(28px,4vw,48px)}
+.cs-meta div{padding:18px 0}
+.cs-meta div+div{padding-left:20px;border-left:1px solid var(--line)}
+.cs-meta dt{font-size:.75rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.cs-meta dd{margin:4px 0 0;font-weight:500}
+.cs-meta a{border-bottom:1px solid var(--line)}
+@media (max-width:700px){.cs-meta{grid-template-columns:1fr}.cs-meta div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
+.cs-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);gap:clamp(28px,5vw,72px)}
+.cs-text{display:grid;gap:30px;align-content:start}
+.blk h4{margin:0 0 10px;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.blk p{margin:0;color:var(--soft)}
+.groups{display:grid;gap:16px}
+.group{border-left:1px solid var(--line);padding-left:16px}
+.group.client{border-color:var(--accent)}
+.group b{display:block;font-weight:500;margin-bottom:4px}
+.group ul{margin:0;padding:0;list-style:none;display:grid;gap:3px;color:var(--soft);font-size:.94rem}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pills span{font-size:.85rem;padding:6px 12px;border-radius:99px;background:var(--card-2);color:var(--soft)}
+@media (max-width:900px){.cs-grid{grid-template-columns:1fr}}
+.gallery{display:grid;gap:14px;align-content:start;position:sticky;top:20px}
+.stage{display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:14px;align-items:start}
+.stage.solo{grid-template-columns:minmax(0,1fr)}
+.browser,.phone{border:1px solid var(--line);background:var(--card);cursor:zoom-in;padding:0;display:block;width:100%;text-align:left}
+.browser{border-radius:14px;overflow:hidden}
+.browser .bar{display:flex;align-items:center;gap:6px;padding:10px 12px}
+.browser .bar i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.18)}
+.browser .bar span{margin-left:8px;flex:1;min-width:0;font-size:.72rem;color:var(--muted);background:var(--card-2);padding:3px 10px;border-radius:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.browser .shot{aspect-ratio:16/10;max-width:100%;overflow:hidden;background:#fff}
+.phone{border-radius:26px;border:6px solid #2a2a2a;overflow:hidden}
+.phone .shot{aspect-ratio:9/19;max-width:100%;overflow:hidden;background:#fff}
+.browser img,.phone img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .8s var(--ease)}
+.browser:hover img,.phone:hover img{transform:scale(1.02)}
+.thumbs{display:flex;gap:6px;flex-wrap:wrap}
+.thumb{font-size:.8rem;padding:7px 13px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;transition:all .3s}
+.thumb[aria-pressed="true"]{background:var(--fg);color:#0a0a0a;border-color:var(--fg)}
+.hint{font-size:.75rem;color:var(--muted)}
+@media (max-width:520px){.stage{grid-template-columns:minmax(0,1fr) 96px}.phone{border-width:4px;border-radius:16px}}
+.flow{list-style:none;margin:0 0 clamp(28px,4vw,48px);padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.flow li{background:var(--bg);padding:20px 16px;display:grid;gap:6px}
+.flow .n{color:var(--accent);font-size:.8rem}
+.flow b{font-family:var(--f-display);font-weight:700;font-size:1.15rem;letter-spacing:-.02em}
+.flow small{color:var(--muted);font-size:.84rem;line-height:1.45}
+@media (max-width:900px){.flow{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:520px){.flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.checks li{display:flex;gap:10px;align-items:baseline;color:var(--soft)}
+.checks li::before{content:"✓";color:var(--pass);font-size:.85rem}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,5vw,72px)}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+
+/* lightbox + toast */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.92);display:grid;grid-template-rows:auto 1fr;opacity:0;transition:opacity .3s}
+.lb.open{opacity:1}
+.lb-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:calc(12px + env(safe-area-inset-top,0px)) 16px 12px}
+.lb-bar span{font-size:.85rem;color:var(--soft);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .lb-scroll{overflow:auto;padding:0 16px 40px;overscroll-behavior:contain}
-.lb-scroll img{display:block;margin:0 auto;max-width:min(1200px,100%);border-radius:8px}
+.lb-scroll img{margin:0 auto;max-width:min(1200px,100%);border-radius:10px}
 .lb-scroll img.m{max-width:min(390px,100%)}
 .lb-scroll img.cv{max-width:min(860px,100%);background:#fff}
-.lb-link{background:transparent;color:#eceef3;border:1px solid rgba(236,238,243,.4);border-radius:8px;padding:7px 14px;font:600 .85rem var(--f-body);text-decoration:none}
-.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:10px;font-size:.9rem;z-index:120;box-shadow:var(--shadow);max-width:calc(100vw - 32px)}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:#0a0a0a;padding:12px 18px;border-radius:99px;font-size:.9rem;z-index:120}
+body.lock{overflow:hidden}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;transition-duration:.001ms!important}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0s!important}
+  .track{animation:none!important}
+  .js .rv{opacity:1;transform:none}
 }
 </style>
 </head>
 <body>
 
+<nav class="nav" aria-label="Main">
+  <a href="#work">Work</a>
+  <a href="#about">About</a>
+  <a href="#experience" class="hide-sm">Experience</a>
+  <a href="#contact">Contact</a>
+  <a href="#" class="cta" data-cv>CV</a>
+</nav>
 
-<header class="nav">
-  <div class="wrap">
-    <a class="brand" href="#home"><i>SH</i>Sedra Hosh</a>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
-    <nav class="links" id="navLinks">
-      <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
-    </nav>
+<main>
+<!-- HERO -->
+<header class="wrap hero" id="home">
+  <div class="hero-top">
+    <span class="status"><i></i>Open to web development &amp; QA roles</span>
+    <span class="label">Damascus, Syria</span>
+  </div>
+  <h1 class="name" aria-label="Sedra Hosh.">
+    <span class="w" aria-hidden="true"><span class="c" style="--i:0">S</span><span class="c" style="--i:1">e</span><span class="c" style="--i:2">d</span><span class="c" style="--i:3">r</span><span class="c" style="--i:4">a</span></span>
+    <span class="w" aria-hidden="true"><span class="c" style="--i:5">H</span><span class="c" style="--i:6">o</span><span class="c" style="--i:7">s</span><span class="c" style="--i:8">h</span><span class="c dot" style="--i:9">.</span></span>
+  </h1>
+  <div class="hero-bottom">
+    <div class="roles">
+      <span style="--i:0">Web Developer</span>
+      <span style="--i:1">QA Engineer</span>
+      <span style="--i:2">Laravel &amp; CMS</span>
+    </div>
+    <div class="hero-right">
+      <p><em>Building, testing,</em> and <span class="serif">improving</span> digital experiences.</p>
+      <div class="btns">
+        <a class="btn fill" href="#work">View my work <span class="arr">→</span></a>
+        <a class="btn" href="#" data-cv>Download CV</a>
+        <a class="btn" href="#contact">Contact me</a>
+      </div>
+    </div>
   </div>
 </header>
 
-<main>
-<!-- HOME -->
-<div class="wrap hero" id="home">
-  <div class="hero-grid">
-    <div>
-      <div class="eyebrow">Information Engineering graduate · Laravel · QA</div>
-      <h1>Sedra<br>Hosh</h1>
-      <div class="role">Web Developer &amp; QA Engineer</div>
-      <p class="tag">Building, testing, and improving digital experiences.</p>
-      <div class="btns">
-        <a class="btn primary" href="#projects">View My Work
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-        <a class="btn" href="#" id="cvBtn">View CV</a>
-        <a class="btn ghost" href="#contact">Contact Me</a>
-      </div>
-    </div>
-    <div class="pipeline" aria-label="How I work">
-      <div class="pipe-head"><span class="mono">how-i-work.run</span><span class="badge">passed</span></div>
-      <ol class="steps">
-        <li style="--i:0"><i class="dot"></i><b>Build</b><span>Laravel · CMS</span></li>
-        <li style="--i:1"><i class="dot"></i><b>Test</b><span>functional · UI</span></li>
-        <li style="--i:2"><i class="dot"></i><b>Identify</b><span>bugs · gaps</span></li>
-        <li style="--i:3"><i class="dot"></i><b>Communicate</b><span>team · client</span></li>
-        <li style="--i:4"><i class="dot"></i><b>Improve</b><span>fix · verify</span></li>
-        <li style="--i:5"><i class="dot"></i><b>Deliver</b><span>review · ship</span></li>
-      </ol>
-    </div>
-  </div>
+<div class="marquee" aria-hidden="true">
+  <div class="track" style="--dur:45s"></div>
 </div>
 
-<hr class="rule">
+<!-- WORK -->
+<section id="work">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>Selected <span class="serif">work</span></h2>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="filter" data-f="all" aria-pressed="true">All</button>
+        <button class="filter" data-f="dev" aria-pressed="false">Development</button>
+        <button class="filter" data-f="qa" aria-pressed="false">QA</button>
+      </div>
+    </div>
+    <div class="grid">
+      <button class="card wide rv" data-case="rhb" data-cat="dev" type="button">
+        <div class="frame"><div class="chips"><span class="chip">Laravel</span><span class="chip">CMS</span><span class="chip">Full project</span></div>
+          <img src="img/rhb-home-cover.webp" alt="RHB website home page" loading="lazy"></div>
+        <div class="meta-row"><h3>RHB</h3><span>Sole developer &amp; project manager</span></div>
+      </button>
+      <button class="card rv" data-case="sia" data-cat="dev qa" type="button">
+        <div class="frame"><div class="chips"><span class="chip">Laravel</span><span class="chip">CMS</span><span class="chip">QA</span></div>
+          <img src="img/sia-home-cover.webp" alt="Syrian Investment Authority home page" loading="lazy"></div>
+        <div class="meta-row"><h3>Syrian Investment Authority</h3><span>Government</span></div>
+      </button>
+      <button class="card rv" data-case="drama" data-cat="dev qa" type="button" style="--d:.1s">
+        <div class="frame"><div class="chips"><span class="chip">Laravel</span><span class="chip">CMS</span><span class="chip">QA</span></div>
+          <img src="img/drama-home-cover.webp" alt="Syrian Drama Platform home page" loading="lazy"></div>
+        <div class="meta-row"><h3>Syrian Drama Platform</h3><span>Government</span></div>
+      </button>
+      <button class="card wide qa-card rv" data-case="bank" data-cat="qa" type="button">
+        <div class="frame">
+          <div class="chips"><span class="chip">QA</span><span class="chip">FinTech</span></div>
+          <ol class="qa-steps"><li>Understand</li><li>Test</li><li>Identify</li><li>Report</li><li>Verify</li><li>Improve</li></ol>
+        </div>
+        <div class="meta-row"><h3>Bank of the East</h3><span>QA Engineer</span></div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="marquee big-marquee" aria-hidden="true">
+  <div class="track" style="--dur:30s"><span><b>Build</b></span><span>Test</span><span><b>Identify</b></span><span>Communicate</span><span><b>Improve</b></span><span>Deliver</span><span><b>Build</b></span><span>Test</span><span><b>Identify</b></span><span>Communicate</span><span><b>Improve</b></span><span>Deliver</span></div>
+</div>
 
 <!-- ABOUT -->
 <section id="about">
   <div class="wrap about">
-    <h2 style="font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700">About</h2>
-    <div class="about-text">
-      <p>I build websites with Laravel, test them carefully, and work with teams and clients to get them right before they launch.</p>
-      <p>I studied Information Engineering (Computer Engineering). My work started in front-end development, then grew into Laravel and CMS development, and later into quality assurance and testing.</p>
-      <p>Today my role goes beyond writing code. I work with developers, review and test websites, report issues and follow them until they are fixed. I also attend project meetings, review client feedback, and discuss requirements and suggestions directly with clients.</p>
-      <p>I'm looking for roles where I can combine my technical background with QA, communication, problem-solving and a good understanding of the product.</p>
-      <dl class="facts">
+    <div class="rv"><span class="label">About</span></div>
+    <div>
+      <p class="statement rv">I build websites with Laravel, <span class="serif">test</span> them carefully, and work with teams and clients <span class="dim">to get them right before they launch.</span></p>
+      <div class="about-more">
+        <p class="rv">I studied Computer Engineering. My work started in front-end development, then grew into Laravel and CMS development, and later into quality assurance and testing.</p>
+        <p class="rv" style="--d:.1s">Today I work with developers, test and review projects, follow issues until they're fixed, attend project meetings, and discuss feedback and requirements directly with clients.</p>
+      </div>
+      <dl class="facts rv">
         <div><dt>Focus</dt><dd>Web development &amp; QA</dd></div>
         <div><dt>Main stack</dt><dd>Laravel · PHP · Blade</dd></div>
         <div><dt>Also</dt><dd>Client communication</dd></div>
@@ -302,325 +369,240 @@ footer{padding-block:32px 48px;color:var(--muted);font-size:.85rem;display:flex;
   </div>
 </section>
 
-<hr class="rule">
-
 <!-- SKILLS -->
-<section id="skills">
+<section id="skills" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head">
-      <h2>Skills</h2>
-      <p>What I use to build websites, check that they work, and keep a project moving with the people involved.</p>
-    </div>
-    <div class="skills">
-      <div class="skill"><h3>Development <span class="mono">build</span></h3>
-        <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">PHP</span><span class="chip">Laravel</span><span class="chip">Laravel Blade</span><span class="chip">CMS Development</span><span class="chip">Responsive Web Development</span><span class="chip">Bootstrap</span><span class="chip">Tailwind CSS</span><span class="chip">Vite</span><span class="chip learn">React<small>learning</small></span></div></div>
-      <div class="skill"><h3>Quality Assurance <span class="mono">test</span></h3>
-        <div class="chips"><span class="chip">Manual Testing</span><span class="chip">Functional Testing</span><span class="chip">UI Testing</span><span class="chip">Responsive Testing</span><span class="chip">Cross-browser Testing</span><span class="chip">Regression Testing</span><span class="chip">Bug Identification</span><span class="chip">Bug Reporting</span><span class="chip">Fix Verification</span><span class="chip">Requirements Validation</span></div></div>
-      <div class="skill"><h3>Professional <span class="mono">communicate</span></h3>
-        <div class="chips"><span class="chip">Client Communication</span><span class="chip">Client Feedback Review</span><span class="chip">Requirement Understanding</span><span class="chip">Project Meetings</span><span class="chip">Task Planning</span><span class="chip">Problem Solving</span><span class="chip">Team Collaboration</span></div></div>
-      <div class="skill"><h3>Tools <span class="mono">daily</span></h3>
-        <div class="chips"><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">VS Code</span><span class="chip">Figma</span></div></div>
+    <div class="head rv"><h2>What I <span class="serif">use</span></h2><p>Tools for building websites, checking that they work, and keeping a project moving with the people involved.</p></div>
+    <div class="skills rv">
+      <div class="skill"><h3>Development</h3><span class="label">Build</span><ul><li>HTML · CSS · JavaScript</li><li>PHP · Laravel · Blade</li><li>CMS development</li><li>Responsive web</li><li>Bootstrap · Tailwind CSS</li><li>Vite</li><li>React <small>learning</small></li></ul></div>
+      <div class="skill"><h3>Quality Assurance</h3><span class="label">Test</span><ul><li>Manual &amp; functional testing</li><li>UI &amp; responsive testing</li><li>Cross-browser testing</li><li>Regression testing</li><li>Bug identification &amp; reporting</li><li>Fix verification</li><li>Requirements validation</li></ul></div>
+      <div class="skill"><h3>Professional</h3><span class="label">Communicate</span><ul><li>Client communication</li><li>Client feedback review</li><li>Requirement understanding</li><li>Project meetings</li><li>Task planning</li><li>Problem solving</li><li>Team collaboration</li></ul></div>
+      <div class="skill"><h3>Tools</h3><span class="label">Daily</span><ul><li>Git</li><li>GitHub</li><li>VS Code</li><li>Figma</li></ul></div>
     </div>
   </div>
 </section>
-
-<hr class="rule">
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Projects</h2>
-      <p>Selected work across Laravel development, CMS and quality assurance. Screenshots are from the live sites and their admin panels; click any screen to see the full page.</p>
-    </div>
-    <div class="filters" role="group" aria-label="Filter projects">
-      <button class="filter" data-f="all" aria-pressed="true">All<span class="n">4</span></button>
-      <button class="filter" data-f="dev" aria-pressed="false">Development<span class="n">3</span></button>
-      <button class="filter" data-f="qa" aria-pressed="false">QA<span class="n">3</span></button>
-    </div>
-
-    <!-- RHB -->
-    <article class="case" data-cat="dev" id="rhb">
-      <div class="case-top">
-        <div>
-          <div class="tags"><span class="tag-pill">Laravel</span><span class="tag-pill">CMS</span><span class="tag-pill">Full project</span></div>
-          <h3>RHB</h3>
-          <p class="type">Residential property platform with a custom CMS</p>
-        </div>
-      </div>
-      <dl class="meta">
-        <div><dt>My role</dt><dd>Sole developer &amp; project manager</dd></div>
-        <div><dt>Type</dt><dd>Bilingual website + admin panel</dd></div>
-        <div><dt>Languages</dt><dd>Arabic / English (RTL · LTR)</dd></div>
-      </dl>
-      <div class="case-body">
-        <div class="case-text">
-          <div class="block"><h4>Overview</h4>
-            <p>A bilingual website for a residential brand. It presents the brand's properties, branches and units, and includes online booking, a Corporate Stays section and a partnership page (Grow with RHB). All site content is managed from a custom admin panel, without touching code.</p></div>
-          <div class="block"><h4>What I built</h4>
-            <div class="resp">
-              <div class="resp-group"><b>Properties &amp; bookings</b><ul><li>Property and unit management: specs, features, landmarks, locations, neighbourhood cards and stats</li><li>Booking system for rooms and units</li><li>Contact and partnership inquiry handling</li></ul></div>
-              <div class="resp-group"><b>Custom CMS</b><ul><li>Block-based pages with sliders, tabs and sections</li><li>Configurable navbar and footer</li><li>News and blog with categories, tags, archive, search, views and shares</li><li>Form builder, polls and surveys</li></ul></div>
-              <div class="resp-group"><b>Platform</b><ul><li>Roles and permissions with Gates &amp; Policies</li><li>Full Arabic/English localization with RTL/LTR</li><li>PDF export, email notifications and REST API</li></ul></div>
-            </div></div>
-          <div class="block"><h4>My contribution</h4>
-            <p>I built the project on my own and managed it from start to delivery: planning the work, developing the website and admin panel, and handling the project with the client.</p></div>
-          <div class="block"><h4>Technologies</h4>
-            <div class="chips"><span class="chip">Laravel 11</span><span class="chip">PHP 8.2</span><span class="chip">Livewire 3</span><span class="chip">Alpine.js</span><span class="chip">Tailwind CSS</span><span class="chip">Vite</span><span class="chip">Swiper</span><span class="chip">DomPDF</span><span class="chip">Sanctum</span><span class="chip">MySQL</span></div></div>
-        </div>
-        <div class="gallery" data-gallery='{"url":"rhb · website","desk":[["rhb-home","Home page"],["rhb-dash","Admin dashboard"]],"mob":[["rhb-mobile","Mobile site"],["rhb-dash-mobile","Mobile admin menu"]]}'></div>
-      </div>
-    </article>
-
-    <!-- SIA -->
-    <article class="case" data-cat="dev qa" id="sia">
-      <div class="case-top">
-        <div>
-          <div class="tags"><span class="tag-pill">Laravel</span><span class="tag-pill">CMS</span><span class="tag-pill">QA</span></div>
-          <h3>Syrian Investment Authority</h3>
-          <p class="type">Government website &amp; CMS</p>
-        </div>
-        <a class="btn visit" href="https://invest.gov.sy/" target="_blank" rel="noopener">invest.gov.sy ↗</a>
-      </div>
-      <dl class="meta">
-        <div><dt>My role</dt><dd>Laravel developer · CMS · QA</dd></div>
-        <div><dt>Type</dt><dd>Government website</dd></div>
-        <div><dt>Team</dt><dd>Development team + client</dd></div>
-      </dl>
-      <div class="case-body">
-        <div class="case-text">
-          <div class="block"><h4>Overview</h4>
-            <p>The official website of the Syrian Investment Authority. It provides information and services related to investment and helps users find the content and resources they need online.</p></div>
-          <div class="block"><h4>Responsibilities</h4>
-            <div class="resp">
-              <div class="resp-group"><b>Development</b><ul><li>Laravel development</li><li>CMS development and management</li><li>Website content management</li></ul></div>
-              <div class="resp-group"><b>Quality assurance</b><ul><li>Functional, UI and responsive testing</li><li>Bug identification and reporting</li><li>Fix verification</li><li>Reviewing website requirements</li></ul></div>
-              <div class="resp-group client"><b>Team &amp; client</b><ul><li>Working with developers</li><li>Reviewing client feedback</li><li>Communicating with the client about feedback and required changes</li></ul></div>
-            </div></div>
-          <div class="block"><h4>My contribution</h4>
-            <p>I worked on the project from both sides. I handled Laravel and CMS tasks, tested the website, identified issues and verified fixes, and took part in reviewing and applying client feedback.</p></div>
-          <div class="block"><h4>Technologies</h4>
-            <div class="chips"><span class="chip">Laravel</span><span class="chip">PHP</span><span class="chip">Blade</span><span class="chip">CMS</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Git</span></div></div>
-        </div>
-        <div class="gallery" data-gallery='{"url":"invest.gov.sy","desk":[["sia-home","Home page"],["sia-dash","Admin dashboard"]],"mob":[["sia-mobile","Mobile"]]}'></div>
-      </div>
-    </article>
-
-    <!-- DRAMA -->
-    <article class="case" data-cat="dev qa" id="drama">
-      <div class="case-top">
-        <div>
-          <div class="tags"><span class="tag-pill">Laravel</span><span class="tag-pill">CMS</span><span class="tag-pill">QA</span></div>
-          <h3>Syrian Drama Platform</h3>
-          <p class="type">Government website &amp; CMS</p>
-        </div>
-        <a class="btn visit" href="https://drama.gov.sy/" target="_blank" rel="noopener">drama.gov.sy ↗</a>
-      </div>
-      <dl class="meta">
-        <div><dt>My role</dt><dd>Laravel developer · CMS · QA</dd></div>
-        <div><dt>Type</dt><dd>Government website</dd></div>
-        <div><dt>Team</dt><dd>Development team + client</dd></div>
-      </dl>
-      <div class="case-body">
-        <div class="case-text">
-          <div class="block"><h4>Overview</h4>
-            <p>A government platform for Syrian drama, giving users an organized and accessible way to browse and interact with its content, including news, articles and forms.</p></div>
-          <div class="block"><h4>Responsibilities</h4>
-            <div class="resp">
-              <div class="resp-group"><b>Development</b><ul><li>Laravel development</li><li>CMS development and management</li><li>Implementing and managing content through the CMS</li></ul></div>
-              <div class="resp-group"><b>Quality assurance</b><ul><li>Testing website functionality</li><li>Identifying UI and functional issues</li><li>Checking responsive behavior</li><li>Verifying fixes and reviewing the site before delivery</li></ul></div>
-              <div class="resp-group client"><b>Team &amp; client</b><ul><li>Working with the development team</li><li>Reviewing client feedback and requirements</li><li>Communicating with the client about feedback and required changes</li></ul></div>
-            </div></div>
-          <div class="block"><h4>My contribution</h4>
-            <p>Alongside Laravel and CMS work, I tested the website, reviewed issues, followed up on fixes, and worked with the team so the final result matched the requirements.</p></div>
-          <div class="block"><h4>Technologies</h4>
-            <div class="chips"><span class="chip">Laravel</span><span class="chip">PHP</span><span class="chip">Blade</span><span class="chip">CMS</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Git</span></div></div>
-        </div>
-        <div class="gallery" data-gallery='{"url":"drama.gov.sy","desk":[["drama-home","Home"],["drama-news","News"],["drama-articles","Articles"],["drama-contact","Contact"],["drama-dash","Admin dashboard"]],"mob":[]}'></div>
-      </div>
-    </article>
-
-    <!-- BANK OF THE EAST (QA layout) -->
-    <article class="case" data-cat="qa" id="bank">
-      <div class="case-top">
-        <div>
-          <div class="tags"><span class="tag-pill">QA</span><span class="tag-pill">FinTech</span></div>
-          <h3>Bank of the East</h3>
-          <p class="type">Quality assurance in a financial technology project</p>
-        </div>
-      </div>
-      <dl class="meta">
-        <div><dt>My role</dt><dd>QA Engineer</dd></div>
-        <div><dt>Context</dt><dd>FinTech Studio</dd></div>
-        <div><dt>Focus</dt><dd>Testing process, not code</dd></div>
-      </dl>
-      <div style="padding:clamp(22px,3.5vw,40px)">
-        <div class="block"><h4>How I worked</h4>
-          <ol class="qa-flow">
-            <li><span class="mono">01</span><b>Understand</b><small>Read the requirements and expected behavior</small></li>
-            <li><span class="mono">02</span><b>Test</b><small>Run manual, functional and UI checks</small></li>
-            <li><span class="mono">03</span><b>Identify</b><small>Find where the result differs from the requirement</small></li>
-            <li><span class="mono">04</span><b>Report</b><small>Write clear bug reports for developers</small></li>
-            <li><span class="mono">05</span><b>Verify</b><small>Re-test fixes and run regression checks</small></li>
-            <li><span class="mono">06</span><b>Improve</b><small>Follow up until issues are closed</small></li>
-          </ol></div>
-      </div>
-      <div class="qa-body">
-        <div class="block"><h4>Responsibilities</h4>
-          <ul class="checklist"><li>Manual testing</li><li>Functional testing</li><li>UI testing</li><li>Bug identification</li><li>Bug reporting</li><li>Regression testing</li><li>Verifying fixes</li><li>Testing against requirements</li><li>Working with developers</li><li>Following up on reported issues</li></ul></div>
-        <div class="block"><h4>What this shows</h4>
-          <p>My experience isn't limited to development. On this project I worked as a QA engineer in a financial technology environment, where checking behavior against requirements and reporting issues clearly matters as much as building features.</p></div>
-      </div>
-    </article>
-  </div>
-</section>
-
-<hr class="rule">
 
 <!-- EXPERIENCE -->
-<section id="experience">
+<section id="experience" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head">
-      <h2>Experience</h2>
-      <p>From front-end internship to Laravel development, QA and client communication.</p>
-    </div>
-    <ol class="timeline">
-      <li><div class="when now">2025 – Present</div><div><h3>Web Developer · RMZ</h3>
-        <p>Laravel and CMS development, testing and client communication. I built and managed RHB on my own, worked on development and QA for the Syrian Investment Authority and Syrian Drama Platform websites, and worked as QA engineer on Bank of the East. I also attend project meetings, review client feedback and discuss requirements with clients.</p>
-        <div class="chips"><span class="chip">Laravel</span><span class="chip">Livewire</span><span class="chip">CMS</span><span class="chip">QA</span><span class="chip">Client communication</span></div></div></li>
-      <li><div class="when">2024 – 2025</div><div><h3>Front-End Developer Intern · MadFox Business Solutions</h3>
-        <p>Built web pages with HTML and CSS, developed interfaces with Bootstrap and Tailwind CSS, turned Figma designs into responsive websites, and created interactive components with JavaScript.</p>
-        <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Tailwind CSS</span></div></div></li>
+    <div class="head rv"><h2>Experi<span class="serif">ence</span></h2><p>From a front-end internship to Laravel development, QA and client communication.</p></div>
+    <ol class="xp">
+      <li class="rv"><div class="when now">2025 — Present</div><div><h3>Web Developer</h3>
+        <p>Laravel and CMS development, testing and client communication. Built and managed RHB on my own, worked on development and QA for the Syrian Investment Authority and Syrian Drama Platform, and worked as QA engineer on Bank of the East.</p></div><div class="co">RMZ</div></li>
+      <li class="rv"><div class="when">2024 — 2025</div><div><h3>Front-End Developer <span class="serif">Intern</span></h3>
+        <p>Built web pages with HTML and CSS, developed interfaces with Bootstrap and Tailwind CSS, turned Figma designs into responsive websites, and created interactive components with JavaScript.</p></div><div class="co">MadFox Business Solutions</div></li>
     </ol>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" style="padding-top:0">
-  <div class="wrap">
-    <div class="contact">
-      <div>
-        <div class="eyebrow" style="color:inherit;opacity:.6">Contact</div>
-        <h2 style="margin-top:12px">Let's work together.</h2>
-        <p>Open to web development and QA roles. The quickest way to reach me is email.</p>
-      </div>
-      <div class="clist">
-        <div class="crow"><div><span class="k">Email</span><a class="v" href="mailto:sedsedra56@gmail.com" style="text-decoration:none">sedsedra56@gmail.com</a></div><button class="copy" id="copyEmail">Copy</button></div>
-        <a class="crow" href="https://github.com/sedrahosh" target="_blank" rel="noopener"><div><span class="k">GitHub</span><span class="v">github.com/sedrahosh</span></div><span>↗</span></a>
-        <a class="crow" id="liRow" href="#" target="_blank" rel="noopener"><div><span class="k">LinkedIn</span><span class="v" id="liText">Coming soon</span></div><span>↗</span></a>
-        <a class="crow" id="cvRow" href="#" target="_blank" rel="noopener"><div><span class="k">CV</span><span class="v" id="cvText">Coming soon</span></div><span>↗</span></a>
-      </div>
-    </div>
-    <footer><span>© 2026 Sedra Hosh</span><span>Web Developer &amp; QA Engineer</span></footer>
+<section id="contact" class="wrap contact">
+  <span class="label rv">Contact</span>
+  <h2 class="rv">Let's work <span class="serif">together.</span></h2>
+  <p class="sub rv">Open to web development and QA roles. The quickest way to reach me is email.</p>
+  <div class="rv">
+    <span class="mail"><a href="mailto:sedsedra56@gmail.com">sedsedra56@gmail.com</a><button class="copy" id="copyEmail" type="button">Copy</button></span>
+  </div>
+  <div class="links rv">
+    <a class="btn" href="https://github.com/sedrahosh" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
+    <a class="btn" href="#" id="liLink" target="_blank" rel="noopener">LinkedIn <span class="arr">↗</span></a>
+    <a class="btn fill" href="#" data-cv>View CV <span class="arr">→</span></a>
   </div>
 </section>
+<div class="wrap"><footer><span>© 2026 Sedra Hosh</span><span>Web Developer &amp; QA Engineer</span></footer></div>
 </main>
 
+<!-- CASE STUDIES (opened in the sheet) -->
+<template id="case-rhb">
+  <div class="wrap cs-hero"><div class="tags"><span>Laravel</span><span>CMS</span><span>Full project</span></div>
+    <h2>RHB</h2><p>Residential property platform with a custom CMS.</p></div>
+  <div class="wrap">
+    <dl class="cs-meta"><div><dt>My role</dt><dd>Sole developer &amp; project manager</dd></div><div><dt>Type</dt><dd>Bilingual website + admin panel</dd></div><div><dt>Languages</dt><dd>Arabic / English (RTL · LTR)</dd></div></dl>
+    <div class="cs-grid">
+      <div class="cs-text">
+        <div class="blk"><h4>Overview</h4><p>A bilingual website for a residential brand. It presents the brand's properties, branches and units, and includes online booking, a Corporate Stays section and a partnership page (Grow with RHB). All site content is managed from a custom admin panel, without touching code.</p></div>
+        <div class="blk"><h4>What I built</h4><div class="groups">
+          <div class="group"><b>Properties &amp; bookings</b><ul><li>Property and unit management: specs, features, landmarks, locations, neighbourhood cards and stats</li><li>Booking system for rooms and units</li><li>Contact and partnership inquiry handling</li></ul></div>
+          <div class="group"><b>Custom CMS</b><ul><li>Block-based pages with sliders, tabs and sections</li><li>Configurable navbar and footer</li><li>News and blog with categories, tags, archive, search, views and shares</li><li>Form builder, polls and surveys</li></ul></div>
+          <div class="group"><b>Platform</b><ul><li>Roles and permissions with Gates &amp; Policies</li><li>Full Arabic/English localization with RTL/LTR</li><li>PDF export, email notifications and REST API</li></ul></div></div></div>
+        <div class="blk"><h4>My contribution</h4><p>I built the project on my own and managed it from start to delivery: planning the work, developing the website and admin panel, and handling the project with the client.</p></div>
+        <div class="blk"><h4>Technologies</h4><div class="pills"><span>Laravel 11</span><span>PHP 8.2</span><span>Livewire 3</span><span>Alpine.js</span><span>Tailwind CSS</span><span>Vite</span><span>Swiper</span><span>DomPDF</span><span>Sanctum</span><span>MySQL</span></div></div>
+      </div>
+      <div class="gallery" data-gallery='{"url":"rhb · website","desk":[["rhb-home","Home page"],["rhb-dash","Admin dashboard"]],"mob":[["rhb-mobile","Mobile site"],["rhb-dash-mobile","Mobile admin menu"]]}'></div>
+    </div>
+  </div>
+</template>
+
+<template id="case-sia">
+  <div class="wrap cs-hero"><div class="tags"><span>Laravel</span><span>CMS</span><span>QA</span></div>
+    <h2>Syrian Investment Authority</h2><p>Government website and CMS.</p></div>
+  <div class="wrap">
+    <dl class="cs-meta"><div><dt>My role</dt><dd>Laravel developer · CMS · QA</dd></div><div><dt>Company</dt><dd>RMZ</dd></div><div><dt>Live site</dt><dd><a href="https://invest.gov.sy/" target="_blank" rel="noopener">invest.gov.sy ↗</a></dd></div></dl>
+    <div class="cs-grid">
+      <div class="cs-text">
+        <div class="blk"><h4>Overview</h4><p>The official website of the Syrian Investment Authority. It provides information and services related to investment and helps users find the content and resources they need online.</p></div>
+        <div class="blk"><h4>Responsibilities</h4><div class="groups">
+          <div class="group"><b>Development</b><ul><li>Laravel development</li><li>CMS development and management</li><li>Website content management</li></ul></div>
+          <div class="group"><b>Quality assurance</b><ul><li>Functional, UI and responsive testing</li><li>Bug identification and reporting</li><li>Fix verification</li><li>Reviewing website requirements</li></ul></div>
+          <div class="group client"><b>Team &amp; client</b><ul><li>Working with developers</li><li>Reviewing client feedback</li><li>Communicating with the client about feedback and required changes</li></ul></div></div></div>
+        <div class="blk"><h4>My contribution</h4><p>I worked on the project from both sides. I handled Laravel and CMS tasks, tested the website, identified issues and verified fixes, and took part in reviewing and applying client feedback.</p></div>
+        <div class="blk"><h4>Technologies</h4><div class="pills"><span>Laravel</span><span>PHP</span><span>Blade</span><span>CMS</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span></div></div>
+      </div>
+      <div class="gallery" data-gallery='{"url":"invest.gov.sy","desk":[["sia-home","Home page"],["sia-dash","Admin dashboard"]],"mob":[["sia-mobile","Mobile"]]}'></div>
+    </div>
+  </div>
+</template>
+
+<template id="case-drama">
+  <div class="wrap cs-hero"><div class="tags"><span>Laravel</span><span>CMS</span><span>QA</span></div>
+    <h2>Syrian Drama Platform</h2><p>Government website and CMS.</p></div>
+  <div class="wrap">
+    <dl class="cs-meta"><div><dt>My role</dt><dd>Laravel developer · CMS · QA</dd></div><div><dt>Company</dt><dd>RMZ</dd></div><div><dt>Live site</dt><dd><a href="https://drama.gov.sy/" target="_blank" rel="noopener">drama.gov.sy ↗</a></dd></div></dl>
+    <div class="cs-grid">
+      <div class="cs-text">
+        <div class="blk"><h4>Overview</h4><p>A government platform for Syrian drama, giving users an organized and accessible way to browse and interact with its content, including news, articles and forms.</p></div>
+        <div class="blk"><h4>Responsibilities</h4><div class="groups">
+          <div class="group"><b>Development</b><ul><li>Laravel development</li><li>CMS development and management</li><li>Implementing and managing content through the CMS</li></ul></div>
+          <div class="group"><b>Quality assurance</b><ul><li>Testing website functionality</li><li>Identifying UI and functional issues</li><li>Checking responsive behavior</li><li>Verifying fixes and reviewing the site before delivery</li></ul></div>
+          <div class="group client"><b>Team &amp; client</b><ul><li>Working with the development team</li><li>Reviewing client feedback and requirements</li><li>Communicating with the client about feedback and required changes</li></ul></div></div></div>
+        <div class="blk"><h4>My contribution</h4><p>Alongside Laravel and CMS work, I tested the website, reviewed issues, followed up on fixes, and worked with the team so the final result matched the requirements.</p></div>
+        <div class="blk"><h4>Technologies</h4><div class="pills"><span>Laravel</span><span>PHP</span><span>Blade</span><span>CMS</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span></div></div>
+      </div>
+      <div class="gallery" data-gallery='{"url":"drama.gov.sy","desk":[["drama-home","Home"],["drama-news","News"],["drama-articles","Articles"],["drama-contact","Contact"],["drama-dash","Admin dashboard"]],"mob":[]}'></div>
+    </div>
+  </div>
+</template>
+
+<template id="case-bank">
+  <div class="wrap cs-hero"><div class="tags"><span>QA</span><span>FinTech</span></div>
+    <h2>Bank of the East</h2><p>Quality assurance in a financial technology project.</p></div>
+  <div class="wrap">
+    <dl class="cs-meta"><div><dt>My role</dt><dd>QA Engineer</dd></div><div><dt>Context</dt><dd>FinTech Studio · RMZ</dd></div><div><dt>Focus</dt><dd>Testing process, not code</dd></div></dl>
+    <ol class="flow">
+      <li><span class="n">01</span><b>Understand</b><small>Read the requirements and expected behavior</small></li>
+      <li><span class="n">02</span><b>Test</b><small>Run manual, functional and UI checks</small></li>
+      <li><span class="n">03</span><b>Identify</b><small>Find where the result differs from the requirement</small></li>
+      <li><span class="n">04</span><b>Report</b><small>Write clear bug reports for developers</small></li>
+      <li><span class="n">05</span><b>Verify</b><small>Re-test fixes and run regression checks</small></li>
+      <li><span class="n">06</span><b>Improve</b><small>Follow up until issues are closed</small></li>
+    </ol>
+    <div class="two">
+      <div class="blk"><h4>Responsibilities</h4><ul class="checks"><li>Manual testing</li><li>Functional testing</li><li>UI testing</li><li>Bug identification</li><li>Bug reporting</li><li>Regression testing</li><li>Verifying fixes</li><li>Testing against requirements</li><li>Working with developers</li><li>Following up on reported issues</li></ul></div>
+      <div class="blk"><h4>What this shows</h4><p>My experience isn't limited to development. On this project I worked as a QA engineer in a financial technology environment, where checking behavior against requirements and reporting issues clearly matters as much as building features.</p></div>
+    </div>
+  </div>
+</template>
+
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Case study">
+  <div class="sheet-bar"><span id="sheetTitle">Case study</span><button class="btn" id="sheetClose" type="button">Close ✕</button></div>
+  <div class="sheet-body" id="sheetBody"></div>
+</div>
+
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Screenshot">
-  <div class="lb-bar"><span id="lbTitle"></span><div style="display:flex;gap:8px"><a id="lbPdf" class="lb-link" href="Sedra_Hosh_CV.pdf" download hidden>Download PDF</a><button id="lbClose">Close</button></div></div>
+  <div class="lb-bar"><span id="lbTitle"></span><div class="btns"><a id="lbPdf" class="btn" href="Sedra_Hosh_CV.pdf" download hidden>Download PDF</a><button class="btn fill" id="lbClose" type="button">Close</button></div></div>
   <div class="lb-scroll" id="lbScroll"><img id="lbImg" alt=""></div>
 </div>
+<div class="cursor" id="cursor" aria-hidden="true">View</div>
 <div class="toast" id="toast" hidden></div>
 
 <script>
-/* ===== Edit these two links when ready ===== */
-const LINKS = {
-  linkedin: "",  // e.g. "https://www.linkedin.com/in/your-name"
-  cv: "built-in" // CV is published with the page (img/cv.webp + Sedra_Hosh_CV.pdf)
-};
+const LINKS = { linkedin: "" }; // add your LinkedIn URL here
 
-const $ = s => document.querySelector(s);
-const toast = msg => { const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 2600); };
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const toast = m => { const t = $('#toast'); t.textContent = m; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 2600); };
 
-// links
-function setLink(el, text, url, label){
-  if(url){ el.href = url; if(text) text.textContent = label; }
-  else { el.removeAttribute('target'); el.classList.add('off'); el.addEventListener('click', e => { e.preventDefault(); toast('This link will be added soon.'); }); }
+// tech marquee
+const tech = ['Laravel','PHP','Blade','Livewire','Alpine.js','Tailwind CSS','MySQL','Manual testing','Regression testing','Bug reporting','Client communication','Git & GitHub','Figma'];
+$('.marquee .track').innerHTML = [...tech, ...tech].map(t => `<span>${t}</span>`).join('');
+
+// reveal on scroll
+const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' }) : null;
+$$('.rv').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+
+// cursor bubble on work cards
+const cur = $('#cursor');
+if (matchMedia('(hover:hover) and (pointer:fine)').matches) {
+  addEventListener('mousemove', e => { cur.style.left = e.clientX + 'px'; cur.style.top = e.clientY + 'px'; }, { passive: true });
+  $$('.card').forEach(c => { c.addEventListener('mouseenter', () => cur.classList.add('on')); c.addEventListener('mouseleave', () => cur.classList.remove('on')); });
 }
-setLink($('#liRow'), $('#liText'), LINKS.linkedin, 'View profile');
-const cvBtn = $('#cvBtn'), cvRow = $('#cvRow');
-$('#cvText').textContent = 'View CV';
-cvRow.removeAttribute('target');
-[cvBtn, cvRow].forEach(el => el.addEventListener('click', e => { e.preventDefault(); openLB('cv', 'Sedra Hosh · CV', 'cv'); }));
 
-// copy email
-$('#copyEmail').addEventListener('click', e => {
-  const btn = e.currentTarget, v = 'sedsedra56@gmail.com';
-  const done = () => { btn.textContent = 'Copied'; setTimeout(() => btn.textContent = 'Copy', 1800); };
-  try { navigator.clipboard.writeText(v).then(done).catch(() => toast(v)); } catch { toast(v); }
-});
-
-// mobile menu
-const menuBtn = $('#menuBtn'), links = $('#navLinks');
-menuBtn.addEventListener('click', () => { const o = links.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', o); });
-links.addEventListener('click', e => { if(e.target.tagName === 'A'){ links.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false); } });
-
-// active nav link
-const secs = [...document.querySelectorAll('#home,section[id]')];
-const navA = [...links.querySelectorAll('a')];
-function onScroll(){
-  let cur = 'home';
-  for(const s of secs){ if(s.getBoundingClientRect().top < 140) cur = s.id; }
-  navA.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + cur));
+// QA card: light up steps one by one when visible
+const qa = $('.qa-steps');
+if (qa && io) {
+  new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { [...qa.children].forEach((li, i) => setTimeout(() => li.classList.add('lit'), 250 * i + 300)); o.disconnect(); } }), { threshold: .5 }).observe(qa);
 }
-addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+// filters
+$$('.filter').forEach(f => f.addEventListener('click', () => {
+  $$('.filter').forEach(x => x.setAttribute('aria-pressed', x === f));
+  $$('.card').forEach(c => c.hidden = !(f.dataset.f === 'all' || c.dataset.cat.split(' ').includes(f.dataset.f)));
+}));
 
 // lightbox
 const lb = $('#lb'), lbImg = $('#lbImg');
-function openLB(src, title, mobile){
-  lbImg.src = 'img/' + src + '.webp'; lbImg.alt = title; lbImg.className = mobile === 'cv' ? 'cv' : mobile ? 'm' : '';
-  $('#lbPdf').hidden = mobile !== 'cv';
-  $('#lbTitle').textContent = title; $('#lbScroll').scrollTop = 0;
-  lb.hidden = false; document.body.style.overflow = 'hidden'; $('#lbClose').focus();
+function openLB(src, title, kind) {
+  lbImg.src = 'img/' + src + '.webp'; lbImg.alt = title; lbImg.className = kind || '';
+  $('#lbPdf').hidden = kind !== 'cv'; $('#lbTitle').textContent = title; $('#lbScroll').scrollTop = 0;
+  lb.hidden = false; requestAnimationFrame(() => lb.classList.add('open')); document.body.classList.add('lock'); $('#lbClose').focus();
 }
-function closeLB(){ lb.hidden = true; document.body.style.overflow = ''; }
+function closeLB() { lb.classList.remove('open'); lb.hidden = true; if (!sheet.classList.contains('open')) document.body.classList.remove('lock'); }
 $('#lbClose').addEventListener('click', closeLB);
-lb.addEventListener('click', e => { if(e.target === lb || e.target.id === 'lbScroll') closeLB(); });
-addEventListener('keydown', e => { if(e.key === 'Escape' && !lb.hidden) closeLB(); });
+lb.addEventListener('click', e => { if (e.target === lb || e.target.id === 'lbScroll') closeLB(); });
 
-// galleries
-document.querySelectorAll('.gallery').forEach(g => {
-  const d = JSON.parse(g.dataset.gallery), name = g.closest('.case').querySelector('h3').textContent;
-  const hasM = d.mob.length > 0;
-  g.innerHTML = `
-    <div class="stage ${hasM ? '' : 'no-phone'}">
-      <button class="browser" type="button"><div class="bar"><i></i><i></i><i></i><span>${d.url}</span></div>
-        <div class="shot"><img loading="lazy" alt=""></div></button>
-      ${hasM ? `<button class="phone" type="button"><div class="shot"><img loading="lazy" alt=""></div></button>` : ''}
-    </div>
-    <div class="thumbs" role="group" aria-label="Screens"></div>
-    <div class="hint">Click a screen to view the full page</div>`;
-  const bImg = g.querySelector('.browser img'), pImg = g.querySelector('.phone img'), thumbs = g.querySelector('.thumbs');
-  let curD = d.desk[0], curM = d.mob[0];
-  const setD = it => { curD = it; bImg.src = 'img/' + it[0] + '-cover.webp'; bImg.alt = name + ' – ' + it[1]; };
-  const setM = it => { curM = it; pImg.src = 'img/' + it[0] + '.webp'; pImg.alt = name + ' – ' + it[1]; };
-  const all = [...d.desk.map(i => [i, 'd']), ...d.mob.map(i => [i, 'm'])];
-  all.forEach(([it, k], idx) => {
-    const b = document.createElement('button');
-    b.className = 'thumb'; b.type = 'button'; b.textContent = it[1];
-    b.dataset.k = k;
-    b.setAttribute('aria-pressed', (k === 'd' && it === curD) || (k === 'm' && it === curM));
-    b.addEventListener('click', () => {
-      k === 'd' ? setD(it) : setM(it);
-      thumbs.querySelectorAll(`.thumb[data-k="${k}"]`).forEach(t => t.setAttribute('aria-pressed', t === b));
-    });
-    thumbs.appendChild(b);
-  });
-  setD(curD); if(hasM) setM(curM);
-  g.querySelector('.browser').addEventListener('click', () => openLB(curD[0], name + ' · ' + curD[1], false));
-  if(hasM) g.querySelector('.phone').addEventListener('click', () => openLB(curM[0], name + ' · ' + curM[1], true));
+// CV + LinkedIn
+$$('[data-cv]').forEach(el => el.addEventListener('click', e => { e.preventDefault(); openLB('cv', 'Sedra Hosh — CV', 'cv'); }));
+const li = $('#liLink');
+if (LINKS.linkedin) li.href = LINKS.linkedin; else li.addEventListener('click', e => { e.preventDefault(); toast('LinkedIn will be added soon.'); });
+
+// copy email
+$('#copyEmail').addEventListener('click', e => {
+  const b = e.currentTarget;
+  try { navigator.clipboard.writeText('sedsedra56@gmail.com').then(() => { b.textContent = 'Copied'; setTimeout(() => b.textContent = 'Copy', 1800); }).catch(() => toast('sedsedra56@gmail.com')); } catch { toast('sedsedra56@gmail.com'); }
 });
 
-// filters
-document.querySelectorAll('.filter').forEach(f => f.addEventListener('click', () => {
-  document.querySelectorAll('.filter').forEach(x => x.setAttribute('aria-pressed', x === f));
-  const v = f.dataset.f;
-  document.querySelectorAll('.case').forEach(c => {
-    c.hidden = !(v === 'all' || c.dataset.cat.split(' ').includes(v));
-    if(!c.hidden){ c.style.animation = 'none'; c.offsetHeight; c.style.animation = ''; }
+// galleries inside a case
+function buildGallery(g, name) {
+  const d = JSON.parse(g.dataset.gallery), hasM = d.mob.length > 0;
+  g.innerHTML = `<div class="stage ${hasM ? '' : 'solo'}">
+      <button class="browser" type="button"><div class="bar"><i></i><i></i><i></i><span>${d.url}</span></div><div class="shot"><img alt=""></div></button>
+      ${hasM ? '<button class="phone" type="button"><div class="shot"><img alt=""></div></button>' : ''}</div>
+    <div class="thumbs" role="group" aria-label="Screens"></div><div class="hint">Click a screen to see the full page</div>`;
+  const bImg = g.querySelector('.browser img'), pImg = g.querySelector('.phone img'), th = g.querySelector('.thumbs');
+  let cd = d.desk[0], cm = d.mob[0];
+  const setD = it => { cd = it; bImg.src = 'img/' + it[0] + '-cover.webp'; bImg.alt = name + ' – ' + it[1]; };
+  const setM = it => { cm = it; pImg.src = 'img/' + it[0] + '.webp'; pImg.alt = name + ' – ' + it[1]; };
+  [...d.desk.map(i => [i, 'd']), ...d.mob.map(i => [i, 'm'])].forEach(([it, k]) => {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'thumb'; b.textContent = it[1]; b.dataset.k = k;
+    b.setAttribute('aria-pressed', it === (k === 'd' ? cd : cm));
+    b.addEventListener('click', () => { k === 'd' ? setD(it) : setM(it); th.querySelectorAll(`[data-k="${k}"]`).forEach(t => t.setAttribute('aria-pressed', t === b)); });
+    th.appendChild(b);
   });
-}));
-</script>
+  setD(cd); if (hasM) setM(cm);
+  g.querySelector('.browser').addEventListener('click', () => openLB(cd[0], name + ' · ' + cd[1]));
+  if (hasM) g.querySelector('.phone').addEventListener('click', () => openLB(cm[0], name + ' · ' + cm[1], 'm'));
+}
 
+// case sheet
+const sheet = $('#sheet'), body = $('#sheetBody');
+let lastCard = null;
+function openCase(id, card) {
+  const tpl = $('#case-' + id); if (!tpl) return;
+  body.replaceChildren(tpl.content.cloneNode(true)); body.scrollTop = 0;
+  const name = body.querySelector('h2').textContent;
+  $('#sheetTitle').textContent = name;
+  body.querySelectorAll('.gallery').forEach(g => buildGallery(g, name));
+  lastCard = card; sheet.classList.add('open'); document.body.classList.add('lock'); cur.classList.remove('on');
+  setTimeout(() => $('#sheetClose').focus(), 50);
+  history.replaceState(null, '', '#' + id);
+}
+function closeCase() {
+  sheet.classList.remove('open'); document.body.classList.remove('lock');
+  history.replaceState(null, '', '#work'); if (lastCard) lastCard.focus({ preventScroll: true });
+}
+$$('.card').forEach(c => c.addEventListener('click', () => openCase(c.dataset.case, c)));
+$('#sheetClose').addEventListener('click', closeCase);
+addEventListener('keydown', e => { if (e.key !== 'Escape') return; if (!lb.hidden) closeLB(); else if (sheet.classList.contains('open')) closeCase(); });
+if (['rhb', 'sia', 'drama', 'bank'].includes(location.hash.slice(1))) openCase(location.hash.slice(1), $(`.card[data-case="${location.hash.slice(1)}"]`));
+</script>
 </body>
 </html>
